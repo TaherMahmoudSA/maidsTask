@@ -1,0 +1,46 @@
+
+spring:
+  application:
+    name: library-system
+  datasource:
+    url: jdbc:postgresql://localhost:5432/library
+    username: maids
+    password: maidspass
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 50
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      minimum-idle: 10
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+
+
+
+######################
+
+#######################
+
+
+###############
+
+jwt:
+  issuer: maidsSystems
+  secret: 'RU1TQXR0ZW5kYW5jZUFwcEF1dGhlbnRpY2F0aW9uU2VjcmV0'
+  expirationHours: 90
+  excluded:
+    services: /api/v1/auth/**,/api/v1/,/v1/config/**,/MinSupportedVer,/v3/api-docs/**,/swagger-resources,/swagger-resources/**,/configuration/ui,/configuration/security,/swagger-ui.html,/webjars/**,/V2/api-docs,swagger-ui/**
+  include:
+    services: /api/v1/customer/orders/**,/api/v1/customer/transactions/**
+  ########################
+
+
+
+
+
+

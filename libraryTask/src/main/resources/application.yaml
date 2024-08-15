@@ -1,0 +1,18 @@
+
+spring:
+  application:
+    name: library-system
+  profiles:
+    active: dev
+  messages:
+    basename: bundle/messages
+    encoding: UTF-8
+    jackson:
+    date-format: yyyy-MM-dd
+    serialization:
+      write-dates-as-timestamps: false
+server:
+  port: 8022
+
+
+
